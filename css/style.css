@@ -1,0 +1,263 @@
+@font-face {
+	font-family: Lobster;
+	src: url(../fonts/Lobster-Regular.ttf);
+}
+
+@font-face {
+	font-family: OpenLight;
+	src: url(../fonts/OpenSans-Light.ttf);
+}
+
+@font-face {
+	font-family: RobotoBold;
+	src: url(../fonts/Roboto-Bold.ttf);
+}
+
+
+body,
+h1, h2, h3, 
+p, ul, li, form, input,
+table, tr, td,
+header, nav, article, section, dialog, figure, aside, footer, span,textarea
+{
+	border:0;
+	margin:0;
+	padding:0;
+	font-size:11.5pt;
+	/*font-family: Roboto,arial,sans-serif; */
+	/*font-family:'Segoe UI Light','Helvetica Neue Light','Segoe UI','Helvetica Neue','Trebuchet MS',Verdana;
+	color:#404040; */
+	font-family:Arial, sans-serif;
+}
+
+/*ul resets */
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration:none;
+	color:#428bca;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+h2 {
+	font-size:30pt;
+	margin-bottom:0.5em;
+	color:black;
+	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+	font-family: RobotoBold, sans-serif;
+}
+
+h3 {
+	font-size:18pt;
+	font-family: RobotoBold,sans-serif;
+	text-decoration: dotted;
+}
+
+
+p {
+	font-size:16pt;
+	color:#333;
+	line-height: 20px;
+	font-family: OpenLight,sans-serif;
+	text-align: center;
+}
+
+
+#path {
+	margin:0.8em;
+
+}
+
+#path li {
+	padding:0.3em;
+	font-size:16pt;
+	font-family: OpenLight, sans-serif;
+	text-transform: uppercase;
+	border:2px solid green;
+	border-radius:150px;
+	margin:0.4em 0;
+	width:30px;
+	height:30px;
+	text-align: center;
+}
+
+
+
+#matrixTable {
+	border:1px solid black;
+	border-collapse: collapse;
+}
+#matrixTable td {
+	padding:4px;
+	width:20px;
+}
+#matrixTable tr, #matrixTable td, #matrixTable th{
+	border:1px solid #333;
+	font-size:13pt;
+	text-align:center;
+}
+
+#page-container {
+	margin:20px;
+	min-height:800px;
+}
+
+#site_header {
+	width:600px;
+	min-height:240px;
+	margin:0 auto;
+}
+#site_header ul {
+	margin:0.6em auto;
+	width:150px;
+
+}
+#site_header ul li{
+	float:left;
+}
+
+#site_header ul li a {
+	padding:0.8em;
+	margin:0.2em;
+	display:block;
+	background:coral;
+	color:white;
+	border-radius: 3px;
+	cursor: pointer;
+
+}
+
+#site_title {
+	display:block;
+
+}
+
+#site_title {
+	text-align: center;
+}
+
+#site_title h1 {
+	font-family: Lobster, sans-serif;
+	font-size: 60px;
+	color:#333;
+	text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+	0px 8px 13px rgba(0,0,0,0.1),
+	0px 18px 23px rgba(0,0,0,0.1);
+}
+
+
+#view_container {
+	margin:0 auto;
+	width:998px;
+	min-height:500px;
+	position: relative;
+}
+
+#listOfPoints li  {
+	font-family: OpenLight,sans-serif;
+	font-size:13pt;
+	margin:0.3em 0;
+	text-align: center;
+}
+
+.clear {
+	clear:both;
+}
+
+.left_page {
+	float:left;
+	width:280px;
+	min-height:400px;
+}
+
+.right_page {
+	float:right;
+	width:680px;
+	min-height:400px;
+}
+
+#graghNodesButton {
+	position: absolute;
+	right:0px;
+	top:9em;
+	cursor: pointer;
+	border:1px dashed burlywood;
+}
+
+
+#nodesCanvas {
+	float:left;
+}
+
+
+#graphInfo {
+	float:right;
+	width:300px;
+	min-height: 300px;
+}
+
+#computePath {
+	padding:0.3em;
+	background:#428bca;
+	border-radius:3px;
+	color:white;
+	font-size:18pt;
+	border:2px solid black;
+	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+	font-family: RobotoBold, sans-serif;
+	-webkit-box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    2px 2px 5px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         2px 2px 5px 0px rgba(50, 50, 50, 0.75);
+	cursor: pointer;
+}
+
+#foundPath {
+	display: none;
+}
+
+#loading {
+	display:none;
+}
+.arrow_box {
+	position: relative;
+	background: #88b7d5;
+	border: 4px solid #c2e1f5;
+	margin:0.8em 0;
+	border-radius:150px;
+	text-align: center;
+	width:30px;
+	height:30px;
+	line-height: 30px;
+	color:white;
+	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+.arrow_box:after, .arrow_box:before {
+	top: 90%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-top-color: #88b7d5;
+	border-width: 10px;
+	margin-left: -10px;
+}
+.arrow_box:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-top-color: #c2e1f5;
+	border-width: 16px;
+	margin-left: -16px;
+}
